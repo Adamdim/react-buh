@@ -1,0 +1,118 @@
+
+* {
+
+
+    font-family: "Montserrat Alternates", sans-serif;
+  }
+  
+  .inputz{
+      border: none;
+      height: 68px;
+      width: 266px;
+      border-radius: 15px;
+      background-color: rgba(0, 0, 0, 0.4);;
+      color: #fff;
+      font-size: 17px;
+      outline: none;
+      cursor: pointer;
+  }
+  
+  
+  .codepen-card {
+    font-family: "Montserrat Alternates", sans-serif;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-right: 1rem;
+    padding: 1rem;
+    z-index: 0;
+    cursor: pointer;
+    height: 200px;
+    margin-top: 5%;
+    
+  }
+  
+  .codepen-card:before {
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 88%;
+    height: 88%;
+    background: #fff;
+    border-radius: 15px;
+    z-index: -1;
+    transition: all 150ms ease;
+  
+    background-position: top center;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+  
+  .codepen-card:hover > .codepen-card-metrics {
+    height: 20px;
+    transition: all 300ms ease;
+  }
+  
+  .codepen-card:hover:before {
+    width: 100%;
+    height: 100%;
+    transition: all 300ms ease;
+  }
+  
+  .codepen-card-info {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+  
+    font-size: 30px;
+  
+  }
+  
+  .codepen-card-user {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .codepen-card-user-image {
+    width: 50px;
+    border-radius: 5px;
+  }
+  
+  .codepen-card-user-details {
+      text-align: center;
+    flex: 1;
+    color: #000;
+    padding: 0 0.5rem;
+    padding-left: 40px;
+  }
+  
+  .codepen-card-user-details > .title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    color: rgb(68, 192, 17);
+    ;
+  }
+  
+  .codepen-card-user-details > .name {
+    font-size: 0.875rem;
+    margin: 0;
+    
+  }
+  
+  .codepen-card-metrics {
+    height: 0;
+    overflow: hidden;
+    transition: all 150ms ease;
+  }
+  .order{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-around;
+  }

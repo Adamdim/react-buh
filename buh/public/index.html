@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@500&family=Muli:ital,wght@1,200&display=swap" rel="stylesheet">
+    <!-- jurra -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap" rel="stylesheet">
+    <!--  monserrat -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- bootstrap -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap" rel="stylesheet">
+    <!-- font monserrat -->
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script src="./index.js"></script>
+  <script>
+    $(document).ready(function(){
+    var zindex = 20;
+
+    $("div.card").click(function(e){
+      e.preventDefault();
+
+      var isShowing = false;
+
+      if ($(this).hasClass("show")) {
+        isShowing = true
+      }
+
+      if ($("div.cards").hasClass("showing")) {
+        // a card is already in view
+        $("div.card.show")
+          .removeClass("show");
+
+        if (isShowing) {
+          // this card was showing - reset the grid
+          $("div.cards")
+            .removeClass("showing");
+        } else {
+          // this card isn't showing - get in with it
+          $(this)
+            .css({zIndex: zindex})
+            .addClass("show");
+
+        }
+
+        zindex++;
+
+      } else {
+        // no cards in view
+        $("div.cards")
+          .addClass("showing");
+        $(this)
+          .css({zIndex:zindex})
+          .addClass("show");
+
+        zindex++;
+      }
+
+    });
+  });
+  let pulsleft = document.getElementById("left");
+  let pulsright = document.getElementById("right");
+  let plustteg = document.getElementById("puls1");
+
+  function pulsa(){
+        if(plustteg.style.height == "50px"){
+        pulsleft.style.top = pulsleft.style.top == "10px"?"35px":"10px";
+        pulsright.style.top = pulsright.style.top == "10px"?"35px":"10px";
+        }
+  }
+
+  var mypuls = setInterval(pulsa,1000);
+  (function($) { // Begin jQuery
+    $(function() { // DOM ready
+      // If a link has a dropdown, add sub menu toggle.
+      $('nav ul li a:not(:only-child)').click(function(e) {
+        $(this).siblings('.nav-dropdown').toggle();
+        // Close one dropdown when selecting another
+        $('.nav-dropdown').not($(this).siblings()).hide();
+        e.stopPropagation();
+      });
+      // Clicking away from dropdown will remove the dropdown class
+      $('html').click(function() {
+        $('.nav-dropdown').hide();
+      });
+      // Toggle open and close nav styles on click
+      $('#nav-toggle').click(function() {
+        $('nav ul').slideToggle();
+      });
+      // Hamburger to X toggle
+      $('#nav-toggle').on('click', function() {
+        this.classList.toggle('active');
+      });
+    }); // end DOM ready
+  })(jQuery);
+  </script>
+</html>

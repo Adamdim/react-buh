@@ -1,0 +1,10 @@
+.input:focus + .line-box .line {
+    width: 100%;
+  }
+  .input {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+
+    outline: none;
+  }

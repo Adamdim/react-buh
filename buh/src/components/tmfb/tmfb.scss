@@ -1,0 +1,121 @@
+/** @format */
+
+.countdown {
+  display: flex;
+  list-style: none;
+  margin: 6px 0 0 0;
+  padding: 0;
+}
+
+.countdown li {
+  display: inline-block;
+}
+
+/* здесь дни, часы, минуты, секунды */
+.countdown li span {
+  width: 100%;
+  color: #44c011;
+  font: 60px Verdana;
+  font-family: "Jura", sans-serif;
+  display: inline-block;
+}
+
+/* разделители . и : */
+.countdown li.seperator {
+  color: #fff;
+  font: 54px Verdana;
+
+  vertical-align: top;
+}
+
+.countdown li div {
+  margin: 0;
+  color: #a7abb1;
+  font: 10pt Verdana;
+  text-align: center;
+}
+.countdown {
+  display: flex;
+  margin: 0 auto;
+}
+#timer {
+  font-family: "Jura", sans-serif;
+  font-size: 38px;
+  text-align: center;
+}
+.newyear {
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  align-self: center;
+  padding: 30px;
+}
+.timer {
+  display: flex;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  margin: 0 auto;
+}
+.telephone {
+  font-family: "Montserrat Alternates", sans-serif;
+  background-color: #fff;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  border: 10px solid rgb(94, 94, 94);
+  padding: 20px;
+  h5 {
+    text-align: center;
+  }
+  button {
+    border: none;
+    background-color: #44c011;
+    padding: 10px 20px;
+    margin-top: 4%;
+    outline: none;
+    border-radius: 10px;
+    color: #fff;
+  }
+  input {
+    padding: 15px;
+  }
+}
+.first_form {
+  input {
+    width: 100%;
+  }
+  .btn {
+    background-color: #38a315;
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 100%;
+
+    
+  }
+}
+.rules {
+  font-size: 12px;
+}
+.newyear {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: 30px;
+}
+.form_tmfb{
+  position: relative;
+  left: 0;
+}
+.input-telephone{
+  border: 1px solid #000;
+}

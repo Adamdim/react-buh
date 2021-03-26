@@ -1,0 +1,49 @@
+.info-start{
+    font-family: 'Montserrat Alternates', sans-serif;
+    h1{
+        margin-top: 4%;
+        text-align: center;
+    }
+    p{
+        color: #44c011;
+        text-align: center;
+        font-weight: bold;
+    }
+}
+
+.info{
+     padding-bottom: 20px;
+    display: flex;
+    .black{
+        width: 470px;
+        height: 470px;
+        background-color:#000;
+    }
+    #buhalter{
+        font-weight:bold;
+    }
+    .info-r{
+        font-family: 'Montserrat Alternates', sans-serif;
+        letter-spacing: 2px;
+        margin-left: 40px;
+        padding-top: 5%;
+    }
+    .Service{
+            padding: 5px 10px 5px 10px;
+            background-color: #25e42f;
+            border-radius: 10px;
+            font-family: 'Nunito', sans-serif;
+            border:none ;
+            outline: none;
+            color: #fff;
+            position: relative;
+left: 50%;
+transform: translate(-50%, 0);
+a{
+  color: #000;
+}
+
+    }
+
+}
+
